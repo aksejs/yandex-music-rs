@@ -8,11 +8,10 @@ fn main() {
     let url: String = base + p;
 
     web_view::builder()
-        .title("Minimal webview example")
+        .title("Yandex Music Desktop")
         .content(Content::Url(url))
         .size(800, 940)
         .resizable(true)
-        .debug(true)
         .user_data(())
         .invoke_handler(|_webview, _arg| Ok(()))
         .run()
