@@ -1,3 +1,20 @@
+#![windows_subsystem = "windows"]
+
+use web_view::*;
+
 fn main() {
-    println!("Hello, world!");
+    let base = "https://passport.yandex.com/auth?".to_string();
+    let p: &str = "origin=music_button-header&retpath=https%3A%2F%2Fmusic.yandex.com%2Fhome";
+    let url: String = base + p;
+
+    web_view::builder()
+        .title("Minimal webview example")
+        .content(Content::Url(url))
+        .size(800, 940)
+        .resizable(true)
+        .debug(true)
+        .user_data(())
+        .invoke_handler(|_webview, _arg| Ok(()))
+        .run()
+        .unwrap();
 }

@@ -1,8 +1,12 @@
 [package]
-name = "temp"
+name = "yandex_music_rs"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+web-view = { git = "https://github.com/Boscop/web-view", ref = "e87e08cab3a2d500d54068ec9c7aaa055a711465" }
+
+[features]
+edge = ["web-view/edge"]
