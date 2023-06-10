@@ -5,11 +5,7 @@ edition = "2021"
 description = "Rust app for Yandex Music"
 
 [dependencies]
-tinyfiledialogs = "3.9.1"
-web-view = { git = "https://github.com/Boscop/web-view", ref = "e87e08cab3a2d500d54068ec9c7aaa055a711465" }
-
-[features]
-edge = ["web-view/edge"]
+web-view = { git = "https://github.com/Boscop/web-view", ref = "82d7cbce6228b1a964673cc0f22944ad808eab42", features = ["edge"] }
 
 [package.metadata.bundle]
 name = "Yandex Music"
